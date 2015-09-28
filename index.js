@@ -4,11 +4,15 @@ module.exports = function (a, b) {
 		throw new TypeError('Arguments must be Buffers');
 	}
 
-	var ret = 0;
-
-	for (var i = 0; i < a.length; i++) {
-		ret |= a[i] ^ b[i];
+	if (a.length !== b.length) {
+		return false;
 	}
 
-	return a.length === b.length && ret === 0;
+	var length = a.length;
+	var i = 0;
+	while (i < length && a[i] === b[i]) {
+		++i;
+	}
+
+	return (i === length);
 };
