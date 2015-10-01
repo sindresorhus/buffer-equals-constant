@@ -20,11 +20,14 @@ bufferEqualsConstant(new Buffer('foo'), new Buffer('foo'));
 
 bufferEqualsConstant(new Buffer('foo'), new Buffer('bar'));
 //=> false
+
+bufferEqualsConstant(new Buffer('foo'), new Buffer('foo'), 512);
+//=> true
 ```
 
 ## API
 
-### bufferEqualsConstant(a, b)
+### bufferEqualsConstant(a, b, [minComp])
 
 Returns a boolean of whether `a` and `b` have the same bytes.
 
@@ -39,6 +42,29 @@ Buffer to compare.
 Type: `Buffer`
 
 Buffer to compare.
+
+#### minComp
+
+Type: `number`
+
+Default: `Math.max(a.length, b.length)`
+
+Minimal number of comparisons used to determine equality.
+
+If the length of `a` or `b` depends on the input of your algorithm, a [possible attacker](https://en.wikipedia.org/wiki/Timing_attack) may gain information about these lengths by varying the input:
+
+```js
+var secret = Buffer('secret');
+bufferEqualsConstant(input, secret);
+```
+
+Based on the execution time of different `input.length` an attacker may discover `secret.length === 6`, because `bufferEqualsConstant` will perform the same number of operations for all `input` with `0 <= input.length <= secret.length`, but needs more operations if `input.length > secret.length`.
+
+To alleviate this problem `minComp` can be used:
+
+```js
+bufferEqualsConstant(input, Buffer('secret'), 1024);
+```
 
 
 ## Related
