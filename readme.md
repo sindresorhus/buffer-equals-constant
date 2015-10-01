@@ -22,6 +22,24 @@ bufferEqualsConstant(new Buffer('foo'), new Buffer('bar'));
 //=> false
 ```
 
+## API
+
+### bufferEqualsConstant(a, b)
+
+Returns a boolean of whether `a` and `b` have the same bytes.
+
+#### a
+
+Type: `Buffer`
+
+Buffer to compare.
+
+#### b
+
+Type: `Buffer`
+
+Buffer to compare.
+
 
 ## Related
 
