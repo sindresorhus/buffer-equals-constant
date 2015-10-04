@@ -1,7 +1,13 @@
 'use strict';
 module.exports = function (a, b) {
-	if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
+
+
+	if (![a, b].every(Buffer.isBuffer)) {
 		throw new TypeError('Arguments must be Buffers');
+	}
+
+	if (a.length !== b.length){
+		return false;
 	}
 
 	var ret = 0;
@@ -10,5 +16,5 @@ module.exports = function (a, b) {
 		ret |= a[i] ^ b[i];
 	}
 
-	return a.length === b.length && ret === 0;
+	return ret === 0;
 };
