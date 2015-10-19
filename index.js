@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function (a, b, minComp) {
 	if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
-		throw new TypeError('Arguments must be Buffers');
+		throw new TypeError('Arguments must be buffers');
 	}
 
 	var aLen = a.length;
@@ -12,6 +12,7 @@ module.exports = function (a, b, minComp) {
 	for (var i = 0; i < len; i++) {
 		ret |= a[i % aLen] ^ b[i % bLen];
 	}
+
 	ret |= aLen ^ bLen;
 
 	return ret === 0;

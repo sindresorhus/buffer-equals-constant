@@ -13,7 +13,7 @@ $ npm install --save buffer-equals-constant
 ## Usage
 
 ```js
-var bufferEqualsConstant = require('buffer-equals-constant');
+const bufferEqualsConstant = require('buffer-equals-constant');
 
 bufferEqualsConstant(new Buffer('foo'), new Buffer('foo'));
 //=> true
@@ -54,7 +54,7 @@ Minimal number of comparisons used to determine equality.
 If the length of `a` or `b` depends on the input of your algorithm, a [possible attacker](https://en.wikipedia.org/wiki/Timing_attack) may gain information about these lengths by varying the input:
 
 ```js
-var secret = Buffer('secret');
+const secret = new Buffer('secret');
 bufferEqualsConstant(input, secret);
 ```
 
@@ -63,7 +63,7 @@ Based on the execution time of different `input.length` an attacker may discover
 To alleviate this problem `minComp` can be used:
 
 ```js
-bufferEqualsConstant(input, Buffer('secret'), 1024);
+bufferEqualsConstant(input, new Buffer('secret'), 1024);
 ```
 
 
