@@ -13,7 +13,6 @@ test(t => {
 	t.true(fn(a, a));
 	t.false(fn(new Buffer('abc'), new Buffer('a0c')));
 	t.throws(() => fn(new Buffer(1), 'abc'));
-	t.end();
 });
 
 test('minComp should not destroy correctness', t => {
@@ -36,6 +35,4 @@ test('minComp should not destroy correctness', t => {
 	t.false(fn(b1, c1, b1.length + 1));
 
 	t.true(fn(new Buffer('foo'), new Buffer('foo'), 512));
-
-	t.end();
 });
