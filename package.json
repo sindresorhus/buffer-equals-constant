@@ -1,44 +1,44 @@
 {
-  "name": "buffer-equals-constant",
-  "version": "1.0.0",
-  "description": "Check if two buffers have the same bytes in constant time",
-  "license": "MIT",
-  "repository": "sindresorhus/buffer-equals-constant",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "maintainers": [
-    {
-      "name": "Michael Mayer",
-      "email": "michael@schnittstabil.de",
-      "url": "schnittstabil.de"
-    }
-  ],
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "buffer",
-    "buffers",
-    "equals",
-    "equal",
-    "compare",
-    "comparison",
-    "constant",
-    "time",
-    "timing",
-    "attack"
-  ],
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "buffer-equals-constant",
+	"version": "1.0.0",
+	"description": "Check if two buffers have the same bytes in constant time",
+	"license": "MIT",
+	"repository": "sindresorhus/buffer-equals-constant",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"maintainers": [
+		{
+			"name": "Michael Mayer",
+			"email": "michael@schnittstabil.de",
+			"url": "schnittstabil.de"
+		}
+	],
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"buffer",
+		"buffers",
+		"equals",
+		"equal",
+		"compare",
+		"comparison",
+		"constant",
+		"time",
+		"timing",
+		"attack"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }

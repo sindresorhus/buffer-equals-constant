@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save buffer-equals-constant
+$ npm install buffer-equals-constant
 ```
 
 
@@ -45,8 +45,7 @@ Buffer to compare.
 
 #### minComp
 
-Type: `number`
-
+Type: `number`<br>
 Default: `Math.max(a.length, b.length)`
 
 Minimal number of comparisons used to determine equality.
@@ -76,4 +75,4 @@ bufferEqualsConstant(input, new Buffer('secret'), 1024);
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

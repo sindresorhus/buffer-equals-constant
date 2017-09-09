@@ -1,15 +1,15 @@
 'use strict';
-module.exports = function (a, b, minComp) {
+module.exports = (a, b, minComp) => {
 	if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
 		throw new TypeError('Arguments must be buffers');
 	}
 
-	var aLen = a.length;
-	var bLen = b.length;
-	var len = Math.max(aLen, bLen, minComp || 0);
-	var ret = 0;
+	const aLen = a.length;
+	const bLen = b.length;
+	const len = Math.max(aLen, bLen, minComp || 0);
+	let ret = 0;
 
-	for (var i = 0; i < len; i++) {
+	for (let i = 0; i < len; i++) {
 		ret |= a[i % aLen] ^ b[i % bLen];
 	}
 
