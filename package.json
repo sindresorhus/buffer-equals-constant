@@ -38,7 +38,7 @@
     "attack"
   ],
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
+    "ava": "0.22.0",
+    "xo": "0.12.1"
   }
 }
