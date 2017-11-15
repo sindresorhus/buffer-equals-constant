@@ -1,6 +1,6 @@
 # Deprecated
 
-[It's included in Node.js 6.6.0 and later.](https://nodejs.org/api/crypto.html#crypto_crypto_timingsafeequal_a_b)
+It was added to Node.js 6.6.0 as [`crypto.timingSafeEqual()`](https://nodejs.org/api/crypto.html#crypto_crypto_timingsafeequal_a_b).
 
 ---
 
