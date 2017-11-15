@@ -1,3 +1,9 @@
+# Deprecated
+
+[It's included in Node.js 6.6.0 and later.](https://nodejs.org/api/crypto.html#crypto_crypto_timingsafeequal_a_b)
+
+---
+
 # buffer-equals-constant [![Build Status](https://travis-ci.org/sindresorhus/buffer-equals-constant.svg?branch=master)](https://travis-ci.org/sindresorhus/buffer-equals-constant)
 
 > Check if two buffers have the same bytes in [constant time](https://en.wikipedia.org/wiki/Timing_attack)
